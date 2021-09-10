@@ -3,7 +3,7 @@ var getApis = function(search) {
     fetch("https://api.spotify.com/v1/search?q=" + /*this will be the mood selector -> */"Sad" + 
 
     "&type=" + /* this will be where the music options are selected -> */ "track%2Cartist%2Cplaylist"
-    
+
      + "&market=US&limit=5&offset=5", {
         headers: {
             'Accept': 'application/json',
@@ -15,6 +15,16 @@ var getApis = function(search) {
             return response.json();
         })
         .then(function(data){
+            console.log(data);
+        });
+
+    var qouteApi = "https://goquotes-api.herokuapp.com/api/v1/all/quotes?New%20item=" + /* this will be the mood selector for quote api -> */ "sad";
+
+    fetch(qouteApi)
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(data) {
             console.log(data);
         });
 };
