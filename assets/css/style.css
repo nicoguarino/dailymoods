@@ -1,0 +1,7 @@
+.mood-select {
+    display: flex;
+    justify-content: center;
+}
+.moods {
+    width: 25%
+}
