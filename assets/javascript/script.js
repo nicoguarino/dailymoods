@@ -13,7 +13,7 @@ var getApis = function(moodOptions) {
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json',
-            'Authorization': /* this is the token key -> */'Bearer BQAkX8lgNuREcxdiKS5Gm4Xd-iO-QrWy84GMCISTi61dO39Lo_5uoVh0BVB0KbYvBPLhw6ic2_FuauiVCbqZJrLOLNKRm_353m93r_-_yCwV0NuCyaRe4nqbqbXEvsN58RvNtOweHfSPtN4'
+            'Authorization': /* this is the token key -> */'Bearer BQACnpJddIGaYL3E3HKVcOu477Q-puqnDh5RWolNPlvWEovPqvTCWxhBEMjy2vfnAM-r0WEiblpbi1lNO-UQGqzrIrcMMSzpX4k071iCVgNpbfKweEtwfTE3TSceVTQysuiXdrUQ6IlRGc4'
          }
     }) 
         .then(function(response) {
@@ -35,9 +35,12 @@ var getApis = function(moodOptions) {
         })
         .then(function(data) {
             console.log(data);
+
+            quoteDisplay(data);
         });
 };
 
+// Displays Spotify Iframe
 function spotifyDisplay (data) {
 
     // clears spotify container
@@ -60,6 +63,23 @@ function spotifyDisplay (data) {
 
 };
 
+// Displays Quote in H3
+function quoteDisplay (data) {
+    // clears quote container
+    document.querySelector("#quote-container").innerHTML = "";
+
+    // grabs quote container
+    var quoteContainer = document.querySelector('#quote-container');
+
+    // dynamically creates h2 to display quote generated
+    var quoteEl = document.createElement("h3")
+    quoteEl.textContent = '"' + data.quotes[Math.floor(Math.random() *200)].text + '"' + " -" + data.quotes[Math.floor(Math.random() *200)].author ;
+
+    quoteContainer.appendChild(quoteEl);
+
+};
+
+// Runs JavaScript on Selecting Value
 function moodSubmitHandler(event) {
     event.preventDefault();
 
