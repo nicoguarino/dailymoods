@@ -127,7 +127,7 @@ function saveMood(mood) {
 function renderMoods() {
    var moodArr = JSON.parse(localStorage.getItem("saved-moods"))
    || [];
-   for (var i = 0; i < moodArr.length; i++) {
+   for (var i = 0; i < 10; i++) {
        const chosenMood = moodArr[i];
        console.log(chosenMood);
        var li = $("<li>");
