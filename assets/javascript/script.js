@@ -88,7 +88,42 @@ function moodSubmitHandler(event) {
 
     //runs getApi fetch function
     getApis(moodOptions);
+
+    saveMood(moodOptions);
+
 };
+// Saves selected moods
+function saveMood(mood) {
+    var moodArr = JSON.parse(localStorage.getItem("saved-moods"))
+    || [];
+     moodArr.push(mood);
+     localStorage.setItem("saved-moods", JSON.stringify(moodArr));
+} 
+
+// Shows history of moods selected
+function renderMoods() {
+    var moodArr = JSON.parse(localStorage.getItem("saved-moods"))
+    || [];
+    for (var i = 0; i < moodArr.length; i++) {
+        const chosenMood = moodArr[i];
+        console.log(chosenMood);
+        var li = $("<li>");
+        var button = $("<button>");
+        button.text(chosenMood);
+        button.addClass("history-btns");
+        li.append(button);
+        $("#mood-list").append(li);
+    }
+}
+
+renderMoods();
+
+ $(".history-btns").click(function() {
+    var moodOptions  = ($(this)[0].innerText);
+
+    getApis(moodOptions);
+    
+ })
 
 
 // on value select runs moodSubmitHandler function
