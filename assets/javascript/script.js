@@ -1,3 +1,15 @@
+var buttonFunction = function(){
+let a = location.href = 'https://accounts.spotify.com/authorize?client_id=8e0821c9695d4b1aa5c76936afe8cbe6&redirect_uri=https://davido1214.github.io/git-it-done/&response_type=token'
+
+var b = a.split("=")
+var c =console.log(b[2])
+
+setTimeout(function(){
+    console.log(b[2])
+},3000)
+
+}
+
 var getApis = function(search) {
     //this link is used to redirect the user to login. Right now the link redirects to one of my gitpages but once this page is properly running we switch the link to this page. Once redirected and authorized the url generates a new auth link which we need to replace the old expired one. (link expires every hour) 
 
@@ -9,6 +21,8 @@ var getApis = function(search) {
         return response.json();
     })
     .then(function(data){
+        var a = document.createElement("p")
+        a.innerHTML = data
         console.log(data)
     })
 
@@ -22,7 +36,7 @@ var getApis = function(search) {
             'Accept': 'application/json',
             'Content-Type': 'application/json',
             // the var AccesToken would replace the random string that make up the old token 
-            'Authorization': 'Bearer BQClsVBfkkr89QrIq18NkTMzDndmxgmNtNJcM9a2cuIj2WX8tJCV2XUM9oH1cegGLfp0POCFbJ4lq7qZ4llwpRrtWuQIghx4sKFvYhgVkKytX4WlLaslo-Z4-Ztcr-j-OR1XOI8C4xOP9LWE9_uGLDp0cJe2A1Sd3u8KEd7HKbNeDdM',
+            'Authorization': 'Bearer BQBPtxy3aPMz8YFNytbOR-0VzlvlWIeq0FbilL8leY2pMwoudZUUBhfx3N_Efk2rE2WeD9zFeo3u72OAryNxPutcWz19CsbRsB-o0c5u4lnmkAXAXBhoBnq7NEyeaha68cHoV7C84JK2BXArFo2eqKDse1rqMzfhThWoaUPF_7mG71I',
             
          }
     }) 
