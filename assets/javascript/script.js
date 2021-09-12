@@ -120,6 +120,9 @@ function saveMood(mood) {
    var moodArr = JSON.parse(localStorage.getItem("saved-moods"))
    || [];
     moodArr.push(mood);
+    if (moodArr.length > 5) {
+        moodArr.shift();
+    }
     localStorage.setItem("saved-moods", JSON.stringify(moodArr));
 }
  
@@ -127,7 +130,7 @@ function saveMood(mood) {
 function renderMoods() {
    var moodArr = JSON.parse(localStorage.getItem("saved-moods"))
    || [];
-   for (var i = 0; i < 10; i++) {
+   for (var i = 0; i < moodArr.length; i++) {
        const chosenMood = moodArr[i];
        console.log(chosenMood);
        var li = $("<li>");
