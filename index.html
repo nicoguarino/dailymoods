@@ -1,19 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css" integrity="sha512-IgmDkwzs96t4SrChW29No3NXBIBv8baW490zk5aXvhCD8vuZM3yUSkbyTBcXohkySecyzIrUwiF/qV0cuPcL3Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma-rtl.css" integrity="sha512-lRrLGKpDJnz2o4GiW8kQ+5ugePN6VGOquzU+nLqJaYPJ3XBk2FXldC+EhHBJVKuO93Ac4sEua9g+VMfWtNcI4Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma-rtl.min.css" integrity="sha512-Yb3erqU+mk7RBdOFQXcE9QbdHnFXg/jUFqTLmKXQX3MdUD3JLhr+6SB8hqNbZqiGfXFQCSdw0tccmQSJGLWkCA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.css" integrity="sha512-7VGuxKU1BFMmA+dC7NiW8jF0YOIe6bibjUBr42unVtEsI/UYzXMS3nkgNvmsY4yqauxeiEs4bXF6fPLsCuxN/A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./assets/css/style.css">
-
-    <title>Daily Moods</title>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css" integrity="sha512-IgmDkwzs96t4SrChW29No3NXBIBv8baW490zk5aXvhCD8vuZM3yUSkbyTBcXohkySecyzIrUwiF/qV0cuPcL3Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma-rtl.css" integrity="sha512-lRrLGKpDJnz2o4GiW8kQ+5ugePN6VGOquzU+nLqJaYPJ3XBk2FXldC+EhHBJVKuO93Ac4sEua9g+VMfWtNcI4Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma-rtl.min.css" integrity="sha512-Yb3erqU+mk7RBdOFQXcE9QbdHnFXg/jUFqTLmKXQX3MdUD3JLhr+6SB8hqNbZqiGfXFQCSdw0tccmQSJGLWkCA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.css" integrity="sha512-7VGuxKU1BFMmA+dC7NiW8jF0YOIe6bibjUBr42unVtEsI/UYzXMS3nkgNvmsY4yqauxeiEs4bXF6fPLsCuxN/A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link id="default" rel="stylesheet" href="./assets/css/style.css">
+ 
+   <title>Daily Moods</title>
 </head>
 <body>
+   <section class="hero has-background-info-dark">
+       <div class="hero-body hero-background">
+           <div class="container">
+             <div class="mood-select" id="mood-select">
+               <select class="moods" name="moods" id="moods">
+                   <option value="" disabled selected>Select Mood</option>
+                   <option value="happy">Happy</option>
+                   <option value="sad">Sad</option>
+                   <option value="angry">Angry</option>
+                   <option value="excited">Excited</option>
+               </select>
+               <button type="submit" class="mood-btn" id="mood-btn">Select</button>
+             </div>
+           </div>
+       </div>
+   </section>
+   <div class="main-body">
+   <div class="columns">
+       <div class="column" id="history-container">
+           <div class="header">
+           <h1>Your recent moods</h1>
+       </div>
+           <div class="display" id="history-display">
+               <ul id="mood-list"></ul>
+           </div>
+          
+       </div>
+       <div class="column" id="quote-container">
+           <div class="header">
+           <h1>Quote for the day</h1>
+       </div>
+           <div class="display" id="quote-display"></div>
+          
+       </div>
+       <div class="column" id="spotify-container">
+           <div class="header">
+           <h1>Mood music</h1>
+       </div>
+           <div class="display" id="spotify-display"></div>
+       </div>
+   </div>
+   </div>
+ 
+ 
+ 
+   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+   <script src="./assets/javascript/script.js"></script> 
+ 
+=======
     <section class="hero has-background-info-dark">
         <div class="hero-body hero-background">
             <div class="container">
