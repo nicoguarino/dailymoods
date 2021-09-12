@@ -44,10 +44,10 @@ var getApis = function(moodOptions) {
 function spotifyDisplay (data) {
 
     // clears spotify container
-    document.querySelector("#spotify-container").innerHTML = "";
+    document.querySelector("#spotify-display").innerHTML = "";
 
     // grabs spotify container
-   var spotifyContainer = document.querySelector('#spotify-container');
+   var spotifyContainer = document.querySelector('#spotify-display');
 
     // dynamically creates iframe to display spotify embed code
    var spotifyEmbedEl = document.createElement('iframe');
@@ -66,10 +66,10 @@ function spotifyDisplay (data) {
 // Displays Quote in H3
 function quoteDisplay (data) {
     // clears quote container
-    document.querySelector("#quote-container").innerHTML = "";
+    document.querySelector("#quote-display").innerHTML = "";
 
     // grabs quote container
-    var quoteContainer = document.querySelector('#quote-container');
+    var quoteContainer = document.querySelector('#quote-display');
 
     // dynamically creates h2 to display quote generated
     var quoteEl = document.createElement("h3")
