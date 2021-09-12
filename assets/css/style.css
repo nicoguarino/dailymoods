@@ -20,7 +20,7 @@
 .main-body {
     background-color: #2f2f2f;
     color: white;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     height: 100vh;
 }
 .header {
@@ -39,5 +39,9 @@
 .display {
     margin-top: 5vh;
     text-align: center;
+}
+.history-btns {
+    width: 50%;
+    margin: 10px; 
 }
 
