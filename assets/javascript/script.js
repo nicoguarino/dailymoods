@@ -105,7 +105,7 @@ function quoteDisplay (data) {
 // Runs JavaScript on Selecting Value
 function moodSubmitHandler(event) {
    event.preventDefault();
- 
+
    // pulls select value
    var moodOptions = document.querySelector("#moods").value;
  
@@ -113,6 +113,8 @@ function moodSubmitHandler(event) {
    getApis(moodOptions);
  
    saveMood(moodOptions);
+
+   renderMoods();
  
 };
 // Saves selected moods
@@ -128,8 +130,10 @@ function saveMood(mood) {
  
 // Shows history of moods selected
 function renderMoods() {
+   document.getElementById("mood-list").innerHTML = "";
    var moodArr = JSON.parse(localStorage.getItem("saved-moods"))
    || [];
+   moodArr.reverse();
    for (var i = 0; i < moodArr.length; i++) {
        const chosenMood = moodArr[i];
        console.log(chosenMood);
@@ -142,7 +146,7 @@ function renderMoods() {
    }
 }
  
-renderMoods();
+ renderMoods();
  
 $(".history-btns").click(function() {
    var moodOptions  = ($(this)[0].innerText);
