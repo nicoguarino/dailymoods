@@ -15,7 +15,7 @@
 </head>
 <body>
     <section class="hero has-background-info-dark">
-        <div class="hero-body">
+        <div class="hero-body hero-background">
             <div class="container">
               <div class="mood-select" id="mood-select">
                 <select class="moods" name="moods" id="moods">
@@ -25,23 +25,37 @@
                     <option value="angry">Angry</option>
                     <option value="excited">Excited</option>
                 </select>
-                <button type="submit" class="mood-btn" id="mood-btn">Submit Test</button>
+                <button type="submit" class="mood-btn" id="mood-btn">Select</button>
               </div>
             </div>
         </div>
     </section>
-
+ 
+    <div class="main-body">
     <div class="columns">
-        <div class="column">
-            history 
+        <div class="column" id="history-container">
+            <div class="header">
+            <h1>Your recent moods</h1> 
+        </div>
+            <div class="display" id="history-display"></div>
+            
         </div>
         <div class="column" id="quote-container">
-            quote  
+            <div class="header">
+            <h1>Quote for the day</h1>
+        </div> 
+            <div class="display" id="quote-display"></div>
+            
         </div>
         <div class="column" id="spotify-container">
-            Spotify 
+            <div class="header">
+            <h1>Mood music</h1>
+        </div>
+            <div class="display" id="spotify-display"></div>
         </div>
     </div>
+    </div>
+
 
 
     
