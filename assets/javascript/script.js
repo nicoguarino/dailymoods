@@ -165,7 +165,6 @@ cssTheme()
 // on value select runs moodSubmitHandler function
 moodSelectContainer.addEventListener("click", moodSubmitHandler);
 
-=======
 // values from html select
 var moodSelectContainer = document.querySelector("#mood-btn");
 
