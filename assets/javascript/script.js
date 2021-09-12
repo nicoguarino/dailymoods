@@ -35,7 +35,7 @@ var getApis = function(moodOptions) {
        headers: {
            'Accept': 'application/json',
            'Content-Type': 'application/json',
-           'Authorization': /* this is the token key -> */'Bearer BQCvPIZbdhow5qS6ieYlHCDMCI_rqsl3hT9jVHKglsum1iAuxSJmZNerijwXDPaWcVLsks2gGqotMO15gPuUuCK11JJNXNTBZZqNjaboOB_QGOwPmS9RMahYl_H0urGEhTrAY_3LlUhqWSyIk-amK3Gf-e3mxW9fJWbN0NGYuZ2dsPM'
+           'Authorization': /* this is the token key -> */'Bearer BQACnpJddIGaYL3E3HKVcOu477Q-puqnDh5RWolNPlvWEovPqvTCWxhBEMjy2vfnAM-r0WEiblpbi1lNO-UQGqzrIrcMMSzpX4k071iCVgNpbfKweEtwfTE3TSceVTQysuiXdrUQ6IlRGc4'
         }
    })
        .then(function(response) {
