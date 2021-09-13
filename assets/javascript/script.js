@@ -1,23 +1,21 @@
-
-
-var moodSelectContainer = document.querySelector("#mood-btn");
+var moodSelectContainer = $("#mood-btn");
 
 
 var cssTheme = function(){
-    document.getElementById("mood-btn").addEventListener("click",function(){
-        var moodOptions = document.querySelector("#moods").value;
+   $("mood-btn").click(function(){
+        var moodOptions = $("#moods").value;
         var linkArray = ["./assets/css/style.css","./assets/css/dark.css"]
         if(moodOptions=="happy"){
-            document.getElementById("default").href="./assets/css/happy.css"
+            $("default").href="./assets/css/happy.css"
         }
         else if(moodOptions == "sad"){
-            document.getElementById("default").href="./assets/css/sad.css"
+            $("default").href="./assets/css/sad.css"
         }
         else if (moodOptions == "angry"){
-            document.getElementById("default").href="./assets/css/angry.css"
+            $("default").href="./assets/css/angry.css"
         }
         else if (moodOptions == "excited"){
-            document.getElementById("default").href="./assets/css/excited.css"
+            $("default").href="./assets/css/excited.css"
         }
 
     })
@@ -36,7 +34,7 @@ var getApis = function(moodOptions) {
        headers: {
            'Accept': 'application/json',
            'Content-Type': 'application/json',
-           'Authorization': /* this is the token key -> */'Bearer BQACnpJddIGaYL3E3HKVcOu477Q-puqnDh5RWolNPlvWEovPqvTCWxhBEMjy2vfnAM-r0WEiblpbi1lNO-UQGqzrIrcMMSzpX4k071iCVgNpbfKweEtwfTE3TSceVTQysuiXdrUQ6IlRGc4'
+           'Authorization': /* this is the token key -> */'Bearer BQBHZhCpsLreQVm0caTw9glZraGhVPpwULCvU9GsaawZ8B3oAxp0HlQudawm-9ioXcLtzU6BTWVihlAVABHg4l80ximrMEIKUwN94dl2adoMbtwjmZbGN2ZhlJsFX0K4vC-izM1ECSP7zrQ'
         }
    })
        .then(function(response) {
@@ -67,10 +65,10 @@ var getApis = function(moodOptions) {
 function spotifyDisplay (data) {
  
    // clears spotify container
-   document.querySelector("#spotify-display").innerHTML = "";
+   document.getElementById("spotify-display").innerHTML = "";
  
    // grabs spotify container
-  var spotifyContainer = document.querySelector('#spotify-display');
+  var spotifyContainer = $('#spotify-display');
  
    // dynamically creates iframe to display spotify embed code
   var spotifyEmbedEl = document.createElement('iframe');
@@ -82,24 +80,23 @@ function spotifyDisplay (data) {
   spotifyEmbedEl.classList = "spotify-embed-El";
  
   // appendsChild iframe to spotify container
-  spotifyContainer.appendChild(spotifyEmbedEl);
+  spotifyContainer.append(spotifyEmbedEl);
  
 };
  
 // Displays Quote in H3
 function quoteDisplay (data) {
    // clears quote container
-   document.querySelector("#quote-display").innerHTML = "";
+   document.getElementById("quote-display").innerHTML = "";
  
    // grabs quote container
-   var quoteContainer = document.querySelector('#quote-display');
+   var quoteContainer = $('#quote-display');
  
    // dynamically creates h2 to display quote generated
    var quoteEl = document.createElement("h3")
    quoteEl.textContent = '"' + data.quotes[Math.floor(Math.random() *200)].text + '"' + " -" + data.quotes[Math.floor(Math.random() *200)].author ;
  
-   quoteContainer.appendChild(quoteEl);
- 
+   quoteContainer.append(quoteEl);
 };
  
 // Runs JavaScript on Selecting Value
@@ -107,7 +104,7 @@ function moodSubmitHandler(event) {
    event.preventDefault();
 
    // pulls select value
-   var moodOptions = document.querySelector("#moods").value;
+   var moodOptions = $("#moods").value;
  
    //runs getApi fetch function
    getApis(moodOptions);
@@ -151,16 +148,16 @@ function renderMoods() {
 $(".history-btns").click(function() {
    var moodOptions  = ($(this)[0].innerText);
     if(moodOptions=="happy"){
-       document.getElementById("default").href="./assets/css/happy.css"
+       $("default").href="./assets/css/happy.css"
      }
     else if(moodOptions == "sad"){
-    document.getElementById("default").href="./assets/css/sad.css"
+        $("default").href="./assets/css/sad.css"
     }
     else if (moodOptions == "angry"){
-        document.getElementById("default").href="./assets/css/angry.css"
+        $("default").href="./assets/css/angry.css"
     }
     else if (moodOptions == "excited"){
-        document.getElementById("default").href="./assets/css/excited.css"
+        $("default").href="./assets/css/excited.css"
     }
    
  
@@ -170,5 +167,5 @@ $(".history-btns").click(function() {
  
 cssTheme()
 // on value select runs moodSubmitHandler function
-moodSelectContainer.addEventListener("click", moodSubmitHandler);
+moodSelectContainer.click(moodSubmitHandler);
 
