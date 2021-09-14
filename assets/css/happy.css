@@ -50,3 +50,11 @@
     color: white;
  }
  
+ .email-form {
+   display: flex;
+  justify-content: center;
+}
+
+.emailinput {
+  border-radius: 5px;
+}
