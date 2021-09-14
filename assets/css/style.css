@@ -1,3 +1,9 @@
+html, body{
+   padding: 0;
+   margin: 0;
+   scroll-behavior: smooth;
+}
+
 .mood-select {
     display: flex;
     justify-content: center;
@@ -28,8 +34,16 @@
     color: white;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     height: 100vh;
+    margin: 0 auto;
+   }
 
- }
+.footer-body{
+   background-color: #2f2f2f;
+   color: white;
+   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+   height: 70vh;
+   margin: 0 auto;
+}
  
 .header {
     display: flex;
@@ -54,3 +68,47 @@
     margin: 10px;
  }
  
+ #contact-form{
+    max-width: 700px;
+    margin: 0 auto;
+    display: block;
+    border: 1px solid #bbb;
+    padding: 14px;
+    border-radius: 7px;
+    margin-bottom: 50px;
+ }
+
+ #contact-form textarea{
+    min-height: 100px;
+    font-size: 14px;
+ }
+
+ #contact-form label{
+   line-height: 2.5em;
+ }
+
+ .input-field{
+    font-size: 14px;
+    border: 1px solid crimson;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 7px;
+
+ }
+
+ #submit-btn{
+    width: 100%;
+    color: crimson;
+    border: none;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: black;
+    
+ }
+
+ .footer{
+    overflow: auto;
+    margin: 0 auto;
+ }
