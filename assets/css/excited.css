@@ -23,7 +23,7 @@
     background-color: #dd9aff;
     color: rgb(237, 186, 125);
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-    height: 100vh;
+    height: 70vh;
  }
  .header {
     display: flex;
