@@ -57,10 +57,6 @@
    </div>
    </div>
 
- 
-   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-   <script src="./assets/javascript/script.js"></script> 
- 
    <footer class="footer">
        <div class="footer-body">
            <h1 style="text-align: center;">Email</h1>
@@ -86,6 +82,23 @@
         <strong>Daily Moods</strong> by Nico Guarino, Jaron Kenyon, Rupesh Khatri, David Olea, and Hibram Sanchez. </a>
       </p>
     </div>
+    <div class="email-form" id="my-form">
+        <form id="contact-form">
+            <input class="emailinput" type="hidden" name="contact_number">
+            <label>Name</label>
+            <input class="emailinput" type="text" name="user_name">
+            <label>Email</label>
+            <input class="emailinput"  type="email" name="user_email">
+            <label>Message</label>
+            <textarea class="emailinput" name="message"></textarea>
+            <input class="emailinput" type="submit" value="Send email">
+        </form>
+    </div>
   </footer>
+
+   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+   <script src="./assets/javascript/script.js"></script> 
+ 
 </body>
 

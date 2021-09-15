@@ -23,7 +23,7 @@
     background-color: #ceb973;
     color: rgb(145, 122, 28);
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-    height: 100vh;
+    height: 70vh;
  }
  .header {
     display: flex;
@@ -49,4 +49,14 @@
     background-color: goldenrod;
     color: white;
  }
- 
+.footer{
+   background-image: linear-gradient(rgb(238, 170, 111), rgb(193, 104, 10))
+}
+ .email-form {
+   display: flex;
+  justify-content: center;
+}
+
+.emailinput {
+  border-radius: 5px;
+}

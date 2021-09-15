@@ -36,7 +36,7 @@ var getApis = function(moodOptions) {
        headers: {
            'Accept': 'application/json',
            'Content-Type': 'application/json',
-           'Authorization': /* this is the token key -> */'Bearer BQACnpJddIGaYL3E3HKVcOu477Q-puqnDh5RWolNPlvWEovPqvTCWxhBEMjy2vfnAM-r0WEiblpbi1lNO-UQGqzrIrcMMSzpX4k071iCVgNpbfKweEtwfTE3TSceVTQysuiXdrUQ6IlRGc4'
+           'Authorization': /* this is the token key -> */'Bearer BQAmxPsEJ9my5XtTELJYowV2pbkUkfnhITHUrFRPrwnV4LYcipKLy1JpxCA_cQSfb5anVE4o7BA6SiaVXteqSVJdOuLC9AqryQ4aRcvv1Rmzycy_6-VD0-AU5k_qh4rwRO4Va_Q3dpKUCY4'
         }
    })
        .then(function(response) {
@@ -167,6 +167,32 @@ $(".history-btns").click(function() {
    getApis(moodOptions);
   
 })
+
+// code fragment for EmailJS API
+
+// the form id is myForm- functional
+$('#contact-form').on('submit', function(event) {
+    event.preventDefault(); // prevent reload
+    
+    console.log(this);
+    var formData = new FormData(this);
+    formData.append('service_id', 'service_xh36pbo');
+    formData.append('template_id', 'contact_form');
+    formData.append('user_id', 'user_xTQSfhQIKj4fptfHspRI1');
+    console.log(formData);
+
+    $.ajax('https://api.emailjs.com/api/v1.0/email/send-form', {
+        type: 'POST',
+        data: formData,
+        contentType: false, // auto-detection
+        processData: false // no need to parse formData to string
+    }).done(function() {
+        console.log('Your mail is sent!');
+    }).fail(function(error) {
+        console.log('Oops... ' + JSON.stringify(error));
+    });
+});
+
  
 cssTheme()
 // on value select runs moodSubmitHandler function
