@@ -47,6 +47,18 @@
     margin: 10px;
     border-radius: 5px;
     background-color: greenyellow;
-    color: white;
+    color: #dd9aff;
  }
+.footer{
+   background-image: linear-gradient(rgb(222, 161, 214), rgb(10, 193, 47))
+}
+
+ .email-form {
+   display: flex;
+  justify-content: center;
+}
+
+.emailinput {
+  border-radius: 5px;
+}
  
