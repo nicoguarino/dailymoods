@@ -20,7 +20,7 @@ Daily Moods is designed to give an outlet to a person to navigate their current 
 
 ## Code Sample <a name = "code-sample"></a>
 
-![Sample Code](https://github.com/nicoguarino/openweather/blob/main/assets/images/sample_code.png "Sample Code")
+![Sample Code](https://github.com/nicoguarino/dailymoods/blob/main/assets/images/sample_code.png?raw=true "Sample Code")
 
 ### Sample Code
 ```HTML Sample
