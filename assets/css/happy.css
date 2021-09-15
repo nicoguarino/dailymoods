@@ -49,7 +49,9 @@
     background-color: goldenrod;
     color: white;
  }
- 
+.footer{
+   background-image: linear-gradient(rgb(238, 170, 111), rgb(193, 104, 10))
+}
  .email-form {
    display: flex;
   justify-content: center;

@@ -49,4 +49,21 @@
     background-color: navy;
     color: white;
  }
+ .footer-div {
+   color: white;
+}
+ .footer {
+   background-image: linear-gradient(rgb(1, 5, 136), rgb(70, 16, 131));
+ }
+
+ .email-form {
+    color: white;
+   display: flex;
+  justify-content: center;
+}
+
+.emailinput {
+   color: white;
+  border-radius: 5px;
+}
  

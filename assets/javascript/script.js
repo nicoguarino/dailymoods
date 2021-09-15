@@ -36,7 +36,7 @@ var getApis = function(moodOptions) {
        headers: {
            'Accept': 'application/json',
            'Content-Type': 'application/json',
-           'Authorization': /* this is the token key -> */'Bearer BQACnpJddIGaYL3E3HKVcOu477Q-puqnDh5RWolNPlvWEovPqvTCWxhBEMjy2vfnAM-r0WEiblpbi1lNO-UQGqzrIrcMMSzpX4k071iCVgNpbfKweEtwfTE3TSceVTQysuiXdrUQ6IlRGc4'
+           'Authorization': /* this is the token key -> */'Bearer BQAmxPsEJ9my5XtTELJYowV2pbkUkfnhITHUrFRPrwnV4LYcipKLy1JpxCA_cQSfb5anVE4o7BA6SiaVXteqSVJdOuLC9AqryQ4aRcvv1Rmzycy_6-VD0-AU5k_qh4rwRO4Va_Q3dpKUCY4'
         }
    })
        .then(function(response) {
@@ -192,7 +192,7 @@ $('#contact-form').on('submit', function(event) {
         console.log('Oops... ' + JSON.stringify(error));
     });
 });
-// code fragment
+
  
 cssTheme()
 // on value select runs moodSubmitHandler function
