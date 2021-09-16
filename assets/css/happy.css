@@ -52,11 +52,22 @@
 .footer{
    background-image: linear-gradient(rgb(238, 170, 111), rgb(193, 104, 10))
 }
- .email-form {
-   display: flex;
-  justify-content: center;
+
+.email-form {
+   color: white;
+  display: flex;
+ justify-content: center;
 }
 
-.emailinput {
-  border-radius: 5px;
+.email-form input {
+  color: white;
+ border-radius: 5px;
+}
+
+.name-script {
+  color: white;
+}
+
+#submit-btn {
+   color: black;
 }
