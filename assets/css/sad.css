@@ -49,10 +49,8 @@
     background-color: navy;
     color: white;
  }
+
  .footer-body {
-   color: white;
-}
- .footer {
    background-image: linear-gradient(rgb(1, 5, 136), rgb(70, 16, 131));
  }
 
