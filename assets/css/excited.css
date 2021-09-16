@@ -53,12 +53,22 @@
    background-image: linear-gradient(rgb(222, 161, 214), rgb(10, 193, 47))
 }
 
- .email-form {
-   display: flex;
-  justify-content: center;
+.email-form {
+   color: white;
+  display: flex;
+ justify-content: center;
 }
 
-.emailinput {
-  border-radius: 5px;
+.email-form input {
+  color: white;
+ border-radius: 5px;
+}
+
+.name-script {
+  color: white;
+}
+
+#submit-btn {
+   color: black;
 }
  
