@@ -20,10 +20,10 @@
              <div class="mood-select" id="mood-select">
                <select class="moods" name="moods" id="moods">
                    <option value="" disabled selected>Select Mood</option>
-                   <option value="happy">Happy</option>
-                   <option value="sad">Sad</option>
-                   <option value="angry">Angry</option>
-                   <option value="excited">Excited</option>
+                   <option value="happy">Happy<p>&#128522;</p></option>
+                   <option value="sad">Sad<p>&#128549;</p></option>
+                   <option value="angry">Angry<p>&#x1F608;</p></option>
+                   <option value="excited">Excited<p>&#x1F929;</p></option>
                </select>
                <button type="submit" class="mood-btn" id="mood-btn">Select</button>
              </div>
@@ -58,7 +58,26 @@
    </div>
 
    <footer class="footer">
-    <div class="content has-text-centered footer-div">
+       <div class="footer-body">
+           <h1 style="text-align: center;">Email</h1>
+
+           <form id="contact-form">
+               <a name="contact"></a>
+
+               <label>Name</label>
+               <input class="input-field" type="text" name="name">
+               
+               <label>Message</label>
+               <textarea class="input-field" name="Message"></textarea>
+
+               <label>Email</label>
+               <input class="input-field" type="text" name="email">
+
+               <input id="submit-btn" type="submit" value="Send Email">
+
+           </form>
+       </div>
+    <div class="content has-text-centered">
       <p>
         <strong>Daily Moods</strong> by Nico Guarino, Jaron Kenyon, Rupesh Khatri, David Olea, and Hibram Sanchez. </a>
       </p>
